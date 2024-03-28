@@ -1,19 +1,20 @@
 function weatherUpdate(response){
     let temperatureElement = document.querySelector("#weather-app-temperature-value");
-    temperatureElement.innerHTML = Math.round(response.data.temperature.current);
-    let cityElement = document.querySelector("h1")
-    cityElement.innerHTML = response.data.city;
-    let weatherConditionElement = document.querySelector("#weatherCondition");
-    weatherConditionElement.innerHTML = response.data.condition.description;
+    let cityElement = document.querySelector("h1")    
+    let weatherConditionElement = document.querySelector("#weatherCondition");    
     let humidityElement = document.querySelector("#humidity"); 
-    humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
     let windSpeedElement = document.querySelector("#windSpeed");
-    windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
     let timeElement = document.querySelector("#time");
     let date = new Date(response.data.time * 1000);
+    let iconElement = document.querySelector("#icon");
+
+    iconElement.innerHTML = `<img src="${response.data.condition.icon_url}" class="weather-app-temperature-icon" />`;
+    temperatureElement.innerHTML = Math.round(response.data.temperature.current);
+    cityElement.innerHTML = response.data.city;
+    weatherConditionElement.innerHTML = response.data.condition.description;
+    humidityElement.innerHTML = `${response.data.temperature.humidity}%`;
+    windSpeedElement.innerHTML = `${response.data.wind.speed}km/h`;
     timeElement.innerHTML = formatDate(date);
-
-
 }
 
 function formatDate(date){
