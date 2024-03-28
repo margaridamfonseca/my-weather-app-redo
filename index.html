@@ -3,13 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="src/index.css">
+    <title>My-Weather-App-Redo</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div class="weather-app"> 
     <header> 
-        <form>
-            <input type="search" placeholder="Enter a city..." requires/>
-            <input type="submit" value="Search" />
+        <form class ="search-form">
+            <input type="search" placeholder="Enter a city..." required class="form-search-box"/>
+            <input type="submit" value="Search" class="form-search-button"/>
         </form>
     </header>
     <main>
@@ -34,5 +39,6 @@
     <footer>
         This project was coded by <a href= "https://github.com/margaridamfonseca"> Margarida Fonseca </a>, is open-sourced on <a href="https://github.com/margaridamfonseca/my-weather-app-redo">GitHub</a> and hosted on <a href="https://my-weather-app-redo.netlify.app/">Netlify</a>.
     </footer>
+</div>
 </body>
 </html>
