@@ -105,14 +105,15 @@ h1{
 
 .weather-forecast-icon{
     margin-top: 8px;
-    width: 100%;
+    width: 80%;
 }
 
 .weather-forecast-temperatures{
     display: flex;
     justify-content: space-around;
-    margin-top: 8px;
+    margin-top: 4px;
     color: #89C4F4;
+    font-size: 16px;
 }
 
 footer{
